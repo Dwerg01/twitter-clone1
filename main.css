@@ -1,0 +1,65 @@
+body, ::before, ::after {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    max-width: 750px;
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --clr-dark-black : #000000;
+    --clr-dark-blackhover : #181819;
+    --clr-dark-darkgrey : #1f2327;
+    --clr-dark-grey : #16181C;
+    --clr-dark-lightblue : #1D9BF0;
+    --clr-dark-white : #F1F1F1;
+    --clr-dark-lightgrey : #767170;
+    
+    --clr-acc-green : #01A66F;
+    --clr-acc-pink : #F91880;
+    --clr-acc-lightblue : DodgerBlue;
+
+    --clr-txt-lightblue : #4697F0; /*was same as above using dodger to test*/ 
+    --clr-txt-white : #E7E9EA;
+    --clr-txt-grey : #72767B;
+    
+    
+    background-color: var(--clr-dark-white);
+    color: var(--clr-dark-black);
+    
+}
+
+#main {
+    height: 100vh;
+    width: 1500px;
+    align-self: center;
+}
+
+.headerBox {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.css-901oao {
+    margin-right: 20px;
+}
+
+h1, h2 {
+    margin: 0 auto;
+    padding: 0;
+    font-weight: 400;
+}
+svg {
+
+    width:20px;
+    fill: var(--clr-dark-lightblue);
+}
+
+.subtext { 
+    color: var(--clr-txt-grey);
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0 auto;
+}
