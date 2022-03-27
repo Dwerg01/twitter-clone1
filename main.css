@@ -1,13 +1,14 @@
-body, ::before, ::after {
+body, ::before, ::after{
     margin: 0 auto;
     padding: 0;
     display: flex;
     align-items: center;
     max-width: 750px;
-    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 :root {
+
+    --ff : "TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --clr-dark-black : #000000;
     --clr-dark-blackhover : #181819;
     --clr-dark-darkgrey : #1f2327;
@@ -19,47 +20,105 @@ body, ::before, ::after {
     --clr-acc-green : #01A66F;
     --clr-acc-pink : #F91880;
     --clr-acc-lightblue : DodgerBlue;
-
+    
     --clr-txt-lightblue : #4697F0; /*was same as above using dodger to test*/ 
     --clr-txt-white : #E7E9EA;
     --clr-txt-grey : #72767B;
     
+    --fs-h2: calc(var(--fs-p) * 1.5);
+    --fs-h5: calc(var(--fs-p) * 1.2);
+    --fs-p: 13px;
+    
+    --fw-s: 400;
+    --fw-m: 550;
+    --fw-l: 700;
+
     
     background-color: var(--clr-dark-white);
     color: var(--clr-dark-black);
+    font-family: var(--ff);
     
 }
 
 #main {
     height: 100vh;
-    width: 1500px;
+    width: 750px;
     align-self: center;
+    margin-left: 15px;
 }
 
-.headerBox {
+#nav-header {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    margin-bottom:5px;
     display:flex;
-    justify-content: flex-start;
+    flex-direction: row;
     align-items: center;
+    justify-content: left;
+    font-size: var(--fs-l);
+    background-color: var(--clr-dark-white);
+    opacity: 85%;
+}
+
+#control-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+}
+
+.main-button {
+    margin: 8px;
+    height: 35px;
+    margin-top: -65px;
+    /* width: 25px; */
+    display: flex;
+    font-weight: var(--fw-m);
+    border: 1px solid lightgrey;
+    border-radius: 30px;
+    padding: 0 10px ;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .css-901oao {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
-h1, h2 {
+h2 {
     margin: 0 auto;
     padding: 0;
-    font-weight: 400;
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-l);
 }
-svg {
 
+svg {
     width:20px;
+    fill: var(--clr-dark-black);
+}
+#verified {
+    margin: 10px 0 0 0;
     fill: var(--clr-dark-lightblue);
+}
+
+#image-cover {
+    margin-left: -15px;
+    width: 103%;
+    max-width: 750px;
+}
+
+#main-avatar {
+    margin: -70px 0 0 auto;
+    border-radius: 50%;
+    width: 125px;
+    border: 5px solid var(--clr-dark-white);
 }
 
 .subtext { 
     color: var(--clr-txt-grey);
-    font-size: 0.8em;
+    font-size: var(--fs-p);
+    font-weight: var(--fw-m);
     padding: 0;
     margin: 0 auto;
 }
