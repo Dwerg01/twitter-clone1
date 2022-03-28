@@ -35,7 +35,7 @@ body, ::before, ::after{
 
     
     background-color: var(--clr-dark-white);
-    color: var(--clr-dark-black);
+    color: var(--clr-txt-grey);
     font-family: var(--ff);
     
 }
@@ -50,7 +50,7 @@ body, ::before, ::after{
 #nav-header {
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 0;
+    box-sizing: contain;
     margin-bottom:5px;
     display:flex;
     flex-direction: row;
@@ -69,16 +69,16 @@ body, ::before, ::after{
 
 .main-button {
     margin: 8px;
-    height: 35px;
+    height: 2.2rem;
+    color: var(--clr-dark-black);
     margin-top: -65px;
     /* width: 25px; */
     display: flex;
+    align-items: center;
     font-weight: var(--fw-m);
-    border: 1px solid lightgrey;
+    border: 1px solid #c1c1c1;
     border-radius: 30px;
     padding: 0 10px ;
-    justify-content: center;
-    align-items: center;
     
 }
 
@@ -87,16 +87,18 @@ body, ::before, ::after{
 }
 
 h2 {
-    margin: 0 auto;
+    margin: 12px 5px -3px auto;
     padding: 0;
     font-size: var(--fs-h2);
     font-weight: var(--fw-l);
+    color: var(--clr-dark-black);
 }
 
 svg {
     width:20px;
     fill: var(--clr-dark-black);
 }
+
 #verified {
     margin: 10px 0 0 0;
     fill: var(--clr-dark-lightblue);
@@ -115,10 +117,25 @@ svg {
     border: 5px solid var(--clr-dark-white);
 }
 
+.strong {
+    font-weight: var(--fw-l);
+    color: var(--clr-dark-black);
+}
+
 .subtext { 
     color: var(--clr-txt-grey);
+    fill: var(--clr-txt-grey); 
     font-size: var(--fs-p);
     font-weight: var(--fw-m);
     padding: 0;
     margin: 0 auto;
+}
+
+#iconCal {
+    display: flex;
+    /* align-items: center; */
+    fill: grey;
+    padding: 2px 0 auto;
+    margin: 10px 0 0 auto;
+    
 }
