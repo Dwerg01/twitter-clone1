@@ -2,7 +2,7 @@ body, ::before, ::after{
     margin: 0 auto;
     padding: 0;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     max-width: 750px;
 }
 
@@ -32,7 +32,7 @@ body, ::before, ::after{
     --fs-p: 13px;
     
     --fw-s: 400;
-    --fw-m: 550;
+    --fw-m: 600;
     --fw-l: 700;
 
     --spc-s: 2px;
@@ -100,8 +100,28 @@ h2 {
     margin: 0 var(--spc-s) auto;
     padding: 0;
     font-size: var(--fs-h2);
-    font-weight: var(--fw-l);
     color: var(--clr-dark-black);
+}
+
+#main-avatar {
+    
+    margin: -100px 0 0 auto;
+    width: 200px;
+    height: 200px;
+}
+
+h4 {
+    color: var(--clr-dark-black);
+    display:inline;
+}
+
+#main-handle {
+    font-weight: var(--fw-l);
+
+}
+.handle {
+    font-weight: var(--fw-m);
+
 }
 
 svg {
@@ -120,12 +140,14 @@ svg {
     max-width: 750px;
 }
 
-#main-avatar {
-    margin: -70px 0 0 auto;
+.avatar {
     border-radius: 50%;
-    width: 125px;
     border: var(--spc-m) solid var(--clr-dark-white);
+    height: 75px;
+    grid-area: Pic;
 }
+
+
 
 .strong {
     font-weight: var(--fw-l);
@@ -173,17 +195,50 @@ svg {
     width: 100%;
     align-items: center;
     justify-content: center;
+    background-size: contain;
     padding: 0;
 }
 
 .hoverItem:hover {
     transition: ease-in 0.1s;
     background: var(--clr-bg);
-    background-size: contain;
     box-sizing: contain;
 }
 
 .active {
     color: var(--clr-dark-black);
     border-bottom: 4px solid var(--clr-dark-lightblue);
+}
+
+
+.tweet-block {
+    display: grid;
+    gap: 0.25em;
+    grid-template-areas: 
+    'Pic tweet tweet tweet tweet'
+    'Pic tweetText tweetText tweetText tweetText'
+    'Pic emote emote emote emote';
+    margin-bottom: var(--spc-xl);
+    margin-left: 0;
+}
+
+.tweet {
+    grid-area: tweet;
+}
+
+.tweet-text {
+    grid-area: tweetText;
+    font-weight: var(--fw-s);
+    color:var(--clr-dark-black);
+    /* background-color: black; */
+}
+
+.eMotes {
+    display:flex;
+    justify-content: space-between;
+    grid-area: emote;
+    margin-top: var(--spc-xl)
+}
+.eMotes > * {
+    fill: grey;
 }
